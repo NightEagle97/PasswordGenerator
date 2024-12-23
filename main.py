@@ -42,29 +42,24 @@ class pwd:
 
 
 
-# Create the main window
-set_appearance_mode("System")  # Modes: system (default), light, dark
-set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
+set_appearance_mode("System")  
+set_default_color_theme("blue")  
 
 root = CTk()
 root.title("Password Generator")
 
 root.geometry("300x240")
 
-# Create a button
 generate_button = CTkButton(root, text="Generate Password", command=pwd.generate_password)
 generate_button.pack(pady=20)
 
-# Create a button TO copy The Text
 generate_button = CTkButton(root, text="Copy Password", command=pwd.copy_password)
 generate_button.pack(pady=10)
 
 exit_button = CTkButton(root, text="Exit", command=root.quit, width=60)
 exit_button.pack(pady=20)
 
-# Create a label to display the password
 password_label = CTkLabel(root, text="", font=("Helvetica", 16))
 password_label.pack(pady=10)
 
-# Start the GUI main loop
 root.mainloop()
